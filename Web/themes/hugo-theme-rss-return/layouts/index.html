@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<div id="home" class="text-2xl">
+    {{.Content}}
+</div>
+
+<div class="grid-md mb-2 grid-rhs">
+    <div class="pt-1 color-default">
+        <div class="pb-1">
+            {{ $posts := (where .Site.RegularPages "Section" "digest") }}
+            {{ range first 10 $posts }}
+            <div class="pr-0">
+                <h2 class="mb-0"><a class="no-decoration sans-serif" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <div class="color-sub">{{ .Content }}</div>
+            </div>
+            {{ end }}
+        </div>
+        <a class="red" href="/digest">View all</a>
+    </div>
+</div>
+
+{{ end }}

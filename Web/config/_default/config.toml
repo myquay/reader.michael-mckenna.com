@@ -1,0 +1,13 @@
+baseURL = "https://reader.michael-mckenna.com"
+languageCode = "en-us"
+title = "RSS Daily Digest"
+themesDir = "themes"
+theme = "hugo-theme-rss-return"
+DefaultContentLanguage = "en"
+
+[params]
+    favicon = "favicon.png"
+    dateFormat = "January 2, 2006"
+
+[outputs] 
+    section = ["HTML"]

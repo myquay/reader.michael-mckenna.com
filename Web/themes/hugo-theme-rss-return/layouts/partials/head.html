@@ -1,0 +1,13 @@
+{{ $css := resources.Match "**.css" | resources.Concat "hello.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+<title>{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
+
+{{- with .Site.Params.favicon }}
+<link href='{{ . | absURL }}' rel='icon' type='image/x-icon' />
+{{- end -}}
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Summary }}">

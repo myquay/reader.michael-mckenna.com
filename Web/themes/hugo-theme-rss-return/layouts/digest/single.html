@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{.Lang}}">
+{{- partial "head.html" . -}}
+
+<body>
+    <div id="content" class="m-auto">
+        <div id="content-wrap">
+            
+            {{ partial "header_custom.html"}}
+            
+            <div class="pb-0 pt-1">
+                <h1 class="pb-0 mb-0 sans-serif text-4xl">{{.Title}}</h1>
+                <p class="mb-2 color-sub mt-0">
+                    {{.Date.Format .Site.Params.dateFormat}}
+                </p>
+
+                <div class="post">
+                    {{.Content}}
+                </div>
+
+                
+            {{- block "main" . }}{{- end }}
+
+            </div>
+        </div>
+        {{- partial "footer.html" . -}}
+    </div>
+
+</body>
+
+</html>

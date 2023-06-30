@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{.Lang}}">
+{{- partial "head.html" . -}}
+
+<body>
+    <div id="content" class="m-auto">
+        <div id="content-wrap">
+            {{ partial "header_custom.html" }}
+            {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </div>
+</body>
+
+</html>

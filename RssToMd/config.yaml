@@ -2,7 +2,9 @@ feeds:
   - https://brandur.org/articles.atom
   - https://michael-mckenna.com/blog/atom.xml
   - https://waitbutwhy.com/feed
-  - http://www.joelonsoftware.com/rss.xml
+  - https://www.joelonsoftware.com/feed/
   - https://benhoyt.com/writings/rss.xml
   - https://jvns.ca/atom.xml
+  - https://news.ycombinator.com/rss
+  - https://feeds.arstechnica.com/arstechnica/index/
 time_zone: Pacific/Auckland
