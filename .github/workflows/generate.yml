@@ -32,3 +32,38 @@ jobs:
         git add */digest/*
         git commit -m "Daily Digest"
         git push
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: 📄 Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: ✨ Setup Hugo
+        env:
+          HUGO_VERSION: 0.111.3
+        run: |
+          mkdir ~/hugo
+          cd ~/hugo
+          curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" --output hugo.tar.gz
+          tar -xvzf hugo.tar.gz
+          sudo mv hugo /usr/local/bin
+
+      - name: ✍️ Set outputs
+        id: custom_outputs
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: 🛠️ Build website
+        run: hugo -s ${{github.workspace}}/Web -d ${{github.workspace}}/dist --environment github-pages --log -v
+        
+      - name: 📦 Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '${{github.workspace}}/dist'
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
