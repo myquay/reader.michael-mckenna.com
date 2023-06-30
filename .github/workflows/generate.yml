@@ -27,6 +27,6 @@ jobs:
     - name: 💾 Check in changes
       run: |
         git config --global user.name 'GitHub Actions'
-        git add digest
+        git add */digest/*
         git commit -m "Daily Digest"
         git push
