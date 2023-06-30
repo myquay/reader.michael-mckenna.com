@@ -34,12 +34,14 @@ jobs:
         git push
 
   deploy:
+    needs: build
+    name: Deploy daily digest changes
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      
+
       - name: 📄 Setup Pages
         uses: actions/configure-pages@v3
 
