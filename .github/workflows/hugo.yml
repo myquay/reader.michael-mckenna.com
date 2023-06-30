@@ -50,7 +50,7 @@ jobs:
         run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
       - name: 🛠️ Build website
-        run: hugo -s ${{github.workspace}}/Web -d ${{github.workspace}}/dist --environment github-pages --log -v
+        run: hugo -s ${{github.workspace}}/Web -d ${{github.workspace}}/dist --environment github-pages --log -v -F
         
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v1
