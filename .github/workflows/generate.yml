@@ -22,7 +22,7 @@ jobs:
     - name: 🚀 Run md process
       run: | 
         cd RssToMd 
-        dotnet run --configuration Release --destination ../Web/content/digest
+        dotnet run --configuration Release --destination ../
 
     - name: 💾 Check in changes
       run: |
