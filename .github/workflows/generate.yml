@@ -1,0 +1,29 @@
+name: Generate Digest
+
+on:
+    schedule:
+        - cron: '5 13 * * *'
+
+jobs:
+  build:
+    name: Build GuidOne library
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: 📄 Checkout
+      uses: actions/checkout@v3
+
+    - name: 🛠️ Setup .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: 🚀 Run md process
+      run: dotnet run --configuration Release --destination ../Web/content/digest
+
+    - name: 💾 Check in changes
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git add digest
+        git commit -m "Daily Digest"
+        git push
