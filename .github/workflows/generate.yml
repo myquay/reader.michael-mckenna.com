@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build GuidOne library
+    name: Generate daily digest
     runs-on: ubuntu-latest
     steps:
 
@@ -20,7 +20,9 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: 🚀 Run md process
-      run: dotnet run --configuration Release --destination ../Web/content/digest
+      run: | 
+        cd Web 
+        dotnet run --configuration Release --destination ../Web/content/digest
 
     - name: 💾 Check in changes
       run: |
