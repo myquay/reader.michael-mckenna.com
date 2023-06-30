@@ -20,6 +20,7 @@ namespace RssToMd.Infrastructure
         public string? Date { get; set; }
 
         [Option('d', "destination",
+            Default = "./",
             HelpText = "Where to save the digest markdown file to")]
         public string? Destination { get; set; }
 

@@ -13,7 +13,7 @@ var configuration = Configuration.Load(Environment.GetCommandLineArgs());
 
 Console.WriteLine($"Generating digest for {configuration.Date} ({configuration.TimeZone})");
 
-using var fs = new FileStream($"{configuration.Date}.md", FileMode.Create);
+using var fs = new FileStream($"{configuration.Destination}/{configuration.Date}.md", FileMode.Create);
 using var sw = new StreamWriter(fs);
 
 //Write out the preamble

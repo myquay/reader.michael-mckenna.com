@@ -1,8 +1,7 @@
 {
   "profiles": {
     "RssToMd": {
-      "commandName": "Project",
-      "commandLineArgs": "-v true -date 2023-06-01"
+      "commandName": "Project"
     }
   }
 }
