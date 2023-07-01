@@ -6,5 +6,7 @@ feeds:
   - https://benhoyt.com/writings/rss.xml
   - https://jvns.ca/atom.xml
   - https://news.ycombinator.com/rss
-  - https://feeds.arstechnica.com/arstechnica/index/
+  - https://feeds.hanselman.com/ScottHanselman
+  - https://scott.ee/feed.xml
+  - https://blog.bonnieeisenman.com/feed.xml
 time_zone: Pacific/Auckland
