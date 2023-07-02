@@ -1,1 +1,55 @@
 /**Custom stles**/
+
+.text-2xl{
+    font-size: 1.25em !important;
+}
+
+a {
+    color: #292824;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h2 a, h3 a {
+    font-weight: bold;
+    color: #292824;
+}
+
+#home a {
+    color: #aa0505;
+    text-decoration: none;
+}
+
+a svg path{
+    fill: #aa0505;
+}
+
+li a:visited{
+    color: #c7c7c7;
+}
+
+.post a {
+    color: #292824;
+}
+
+.post li a {
+    color: #292824;
+    font-weight: normal;
+}
+
+.post li a:visited{
+    color: #c7c7c7;
+}
+
+a.red{
+    color: #aa0505;
+}
+
+li a.red:visited{
+    color: #aa0505;
+}
+
+a.red:hover {
+    color: #595854;
+    text-decoration: underline;
+}
