@@ -49,6 +49,7 @@ jobs:
       - name: 💾 Checkout
         uses: actions/checkout@v3
         with:
+          ref: ${{ github.ref }}
           submodules: true #Themes in Hugo are usually submodules
 
       - name: 📄 Setup Pages
