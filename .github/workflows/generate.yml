@@ -23,13 +23,13 @@ jobs:
       env:
         FEEDMD_VERSION: 0.0.1-alpha
       run: |
-        curl -L "https://github.com/myquay/feedmd/releases/download/v${FEEDMD_VERSION}/feedmd-linux-x64.zip --output feedmd.zip
+        curl -L "https://github.com/myquay/feedmd/releases/download/v${FEEDMD_VERSION}/feedmd-linux-x64.zip" --output feedmd.zip
         unzip feedmd.zip
-        sudo mv feedmd ../
+        sudo mv feedmd /usr/local/bin
 
     - name: 🚀 Run md process
       run: | 
-        feedmd --destination web/content/digest
+        feedmd --destination ${{github.workspace}}/web/content/digest
 
     - name: 💾 Check in changes
       run: |
