@@ -21,7 +21,7 @@ jobs:
 
     - name: ✨ Setup FeedMD
       env:
-        FEEDMD_VERSION: 0.0.1-alpha
+        FEEDMD_VERSION: 0.0.2-alpha
       run: |
         curl -L "https://github.com/myquay/feedmd/releases/download/v${FEEDMD_VERSION}/feedmd-linux-x64.zip" --output feedmd.zip
         unzip feedmd.zip
