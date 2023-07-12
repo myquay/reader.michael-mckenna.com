@@ -1,5 +1,7 @@
 feeds:
   - https://brandur.org/articles.atom
+  - https://brandur.org/fragments.atom
+  - https://brandur.org/atoms.atom
   - https://michael-mckenna.com/blog/atom.xml
   - https://waitbutwhy.com/feed
   - https://www.joelonsoftware.com/feed/
@@ -16,4 +18,6 @@ feeds:
   - https://borretti.me/feed.xml
   - https://devopsjournal.io/blog/atom.xml
   - https://maggieappleton.com/rss.xml
+  - https://blog.maartenballiauw.be/feed.xml
+  - https://blog.jgc.org/feeds/posts/default
 time_zone: Pacific/Auckland
