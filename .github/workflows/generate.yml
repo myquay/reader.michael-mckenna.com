@@ -29,7 +29,7 @@ jobs:
 
     - name: 🚀 Run md process
       run: | 
-        feedmd build --destination ${{github.workspace}}/web/content/digest -c config.yml
+        feedmd build --destination ${{github.workspace}}/web/content/digest
 
     - name: 💾 Check in changes
       run: |

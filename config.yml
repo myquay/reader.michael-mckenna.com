@@ -20,4 +20,10 @@ feeds:
   - https://maggieappleton.com/rss.xml
   - https://blog.maartenballiauw.be/feed.xml
   - https://blog.jgc.org/feeds/posts/default
+  - https://boffosocko.com/feed/
+  - http://feed.looselytyped.net/CJsLooselyTyped
+  - https://craftbyzen.com/rss.xml
+  - http://feeds.feedburner.com/OdeToCode
+  - https://compiledexperience.com/blog/syndicate/rss/
+  - https://snarfed.org/feed
 time_zone: Pacific/Auckland
