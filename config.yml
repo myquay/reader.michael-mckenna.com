@@ -26,4 +26,5 @@ feeds:
   - http://feeds.feedburner.com/OdeToCode
   - https://compiledexperience.com/blog/syndicate/rss/
   - https://snarfed.org/feed
+  - https://petersmith.org/index.xml
 time_zone: Pacific/Auckland
