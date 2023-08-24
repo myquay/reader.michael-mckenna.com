@@ -28,4 +28,5 @@ feeds:
   - https://snarfed.org/feed
   - https://petersmith.org/index.xml
   - https://dri.es/rss.xml
+  - https://aegir.org/words/feed
 time_zone: Pacific/Auckland
