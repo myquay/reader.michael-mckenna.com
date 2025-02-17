@@ -75,7 +75,7 @@ jobs:
         run: hugo -s ${{github.workspace}}/web -d ${{github.workspace}}/dist --environment github-pages --log -v -F
         
       - name: 📦 Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '${{github.workspace}}/dist'
       - name: 🚀 Deploy to GitHub Pages
