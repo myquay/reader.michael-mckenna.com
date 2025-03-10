@@ -33,4 +33,5 @@ feeds:
   - https://rachelbythebay.com/w/atom.xml
   - https://blog.jim-nielsen.com/feed.xml
   - https://www.geekytidbits.com/rss.xml
+  - https://rodyne.com/?feed=rss2
 time_zone: Pacific/Auckland
