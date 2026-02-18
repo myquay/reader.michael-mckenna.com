@@ -35,4 +35,5 @@ feeds:
   - https://www.geekytidbits.com/rss.xml
   - https://rodyne.com/?feed=rss2
   - https://barryfrost.com/rss
+  - https://www.tbray.org/ongoing/ongoing.atom
 time_zone: Pacific/Auckland
